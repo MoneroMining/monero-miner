@@ -1,3 +1,6 @@
+`NOTE: Heroku will ban your account for doing this. Usually within a matter of hours.`
+
+
 # monero-miner
 
 1) Fork or Clone this Repository
