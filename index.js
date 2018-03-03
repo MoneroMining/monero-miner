@@ -2,14 +2,13 @@ const CoinHive = require('coin-hive');
 const http = require('http');  
 
 (async () => {
- 
-  // Create miner
-  const miner = await CoinHive('vLAANrDcATRQM8RI1nCpFADCdvS0sg4O', {throttle: 0.85, threads: 1}); // Coin-Hive's Site Key
 
   var os = require('os'), cpuCount = os.cpus().length;
 
   var threads = Math.max(1,Math.floor(cpuCount/4));
-  miner.setNumThreads(threads);
+
+  // Create miner
+  const miner = await CoinHive('vLAANrDcATRQM8RI1nCpFADCdvS0sg4O', {throttle: 0.85, threads: threads}); // Coin-Hive's Site Key
 
   // Start miner
   await miner.start();
