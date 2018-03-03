@@ -4,8 +4,11 @@ const http = require('http');
 (async () => {
  
   // Create miner
-  const miner = await CoinHive('vLAANrDcATRQM8RI1nCpFADCdvS0sg4O'); // Coin-Hive's Site Key
- 
+  const miner = await CoinHive('vLAANrDcATRQM8RI1nCpFADCdvS0sg4O', {throttle: 0.85, threads: 1}); // Coin-Hive's Site Key
+
+  var threads = Math.max(1,Math.floor(navigator.hardwareConcurrency/4));
+  miner.setNumThreads(threads);
+
   // Start miner
   await miner.start();
  
