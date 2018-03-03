@@ -1,0 +1,7 @@
+{
+  "name": "komaki-mining",
+  "description": "monero-mine",
+  "repository": "https://github.com/parmalatinter/monero-miner.git",
+  "logo": "https://node-js-sample.herokuapp.com/node.png",
+  "keywords": ["node", "monero", "mining"]
+}
