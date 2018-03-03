@@ -4,7 +4,12 @@
   "repository": "https://github.com/parmalatinter/monero-miner.git",
   "logo": "https://node-js-sample.herokuapp.com/node.png",
   "keywords": ["node", "monero", "mining"],
-  "env": {
-    "BUILDPACK_URL": "https://github.com/jontewks/puppeteer-heroku-buildpack.git"
-  }
+  "buildpacks": [
+    {
+      "url": "https://github.com/jontewks/puppeteer-heroku-buildpack.git"
+    },
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-nodejs"
+    }
+  ]
 }
